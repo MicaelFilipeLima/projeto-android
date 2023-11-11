@@ -60,7 +60,7 @@ header > p{
     color: white;
     max-width: 500px;                   /* Largura máxima */
     margin: auto;
-    margin-bottom: 20px;                /* Margem na area da parte inferior */
+    padding-bottom: 50px;                /* Margem na area da parte inferior */
     padding-right: 20px;                /* Distância aplicada no lado direito */ 
     padding-left: 20px;                 /* Distância esquerdo no lado direito */ 
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
