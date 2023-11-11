@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+/* O root serve para simplificar a raiz do elemento */
+:root{
+    --cor0: #c5ebc5;
+    --cor01: #83e1ad;
+    --cor02: #3ddc84;
+    --cor03: #2fa866;
+    --cor04: #1a5c37;
+    --cor05: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --font-android: 'Android', 'cursive';
+}
+* {
+        margin: 0px;
+        padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externo::after{
+    content: "\00A0\1F517";
+
+}
+
+/* Configurações do cabeçalho ("Curiosidades de Tecnologia") */
+header{
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* Configurações do cabeçalho ("Curiosidades de Tecnologia") */
+header > h1{
+    color: white;  /* Cor */
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;                  /* Margem na area da parte inferior */
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.267);
+}
+
+/* Configurações por baixo do título ("Tudo aquilo que você sempre quis saber o mundo..") */
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;                   /* Largura máxima */
+    margin: auto;
+    margin-bottom: 20px;                /* Margem na area da parte inferior */
+    padding-right: 20px;                /* Distância aplicada no lado direito */ 
+    padding-left: 20px;                 /* Distância esquerdo no lado direito */ 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
+}
+
+/* Preenchimento/Sombras dos menus */
+nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.518);
+}
+
+/* Configurações dos menus ("Home, Noticias, Curiosidades, FaleConnosco") */
+nav > a{
+    color: var(--cor01);
+    padding: 10px;
+    border-radius: 20px;   /* Bordas arredondadas */
+    text-decoration: none;  /* Decoração do texto */
+    font-weight: bold;      /* Intensidade da fonte */
+    transition-duration: .5s;   /*Tempo que a transição vai demorar assim que coloco o mouse por cima */
+}
+
+/* Configurações quando colocamos o mouse por cima */
+nav > a:hover{
+    background-color: var(--cor02);
+    color: var(--cor05);
+}
+
+/* Configurações totais do conteúdo principal */
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.716);
+    border-bottom-left-radius: 10px;    /* Bordas na área inferior-direita */
+    border-bottom-right-radius: 10px;   /* Bordas na área inferior-esquerda */
+}
+
+/* Configurações do título-principal ("Historia da primeira mascote") */
+main h1{
+    color: var(--cor04);   /* Cor */
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+/* Configurações do subtitulo ("A Primeira versão") */
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor04);
+    font-weight: normal;
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor01), transparent);  /* Degradê com transparência */
+    text-indent: 15px;                  /* Identação do texto (O texto fica um bocadinho mais à frente) */
+}
+
+/* Configurações em todos os parágrafos do texto */
+main p{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;          /* Identação do texto */
+    font-size: 1em;
+    line-height: 2em;           /* Tamanho da linha */
+}
+/* Colocar tamanho forte nos parágrafos */
+main strong{
+    color: var(--cor04);
+    font-weight: bold;
+}
+
+/* Configurações das palavras sublinhadas que têm links como referência */
+main a{
+    text-decoration: none;
+    font-weight: bold; 
+    color: var(--cor05);
+    background-color: var(--cor01);
+    padding: 2px 6px;
+}
+
+/* Colocar sublinhado nas palavras que têm links como referencia */
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor04);
+}
+
+/* Largura da imagem */
+main img{
+    width: 100%;  /* Largura */
+}
+
+/* Configurações da imagem (block: faz com que a foto seja renderizado como bloco) */
+main img.pequena{
+    max-width: 350px;
+    display: block;    /* O elemento é tratado como bloco */
+    margin: auto;
+}
+
+
+/* Configurações do tamanho da caixa */
+aside{
+    background-color: var(--cor01);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
+}
+
+/* Título que está em cima das listas */
+aside > h3{ 
+    background-color: var(--cor04);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Configurações das listas */
+aside > ul{
+    list-style-type: "\2714\00A0\00A0";
+    list-style-position: inside;
+    columns: 2;   /* As listas vão ser separadas em 2 colunas */
+    margin: 20px 0px 30px 50px;
+}
+
+/* Cabeçalho */
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+/* Configurações do sublinhado do cabeçalho */
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* Colocar sublinhado no cabeçalho */
+footer a:hover{ 
+    text-decoration: underline;
+    color: var(--cor01);
+}
